@@ -1,0 +1,20 @@
+[
+    {
+        "name":"Brooke Waupsh",
+        "title": "CEO",
+        "desc": "Award-winning marketer and brand strategic. Experience breathing life into established brands and building one from scratch, now with a national footprint.",
+        "image":"https://wellfound.com/cdn-cgi/image/width=200,height=200,format=auto,fit=cover/https://photos.wellfound.com/users/7341457-original?1559670487"
+    },
+    {
+        "name":"Gerardo Vazquez",
+        "title": "CTO",
+        "desc": "JavaScript enthusiast. Full Stack Engineer with experience in React, PWA, GCP, and Next.js.",
+        "image":"https://wellfound.com/cdn-cgi/image/width=200,height=200,format=auto,fit=cover/https://photos.wellfound.com/users/10272782-original?1694102501"
+    },
+    {
+        "name":"Shangguan Wang",
+        "title": "Frontend Engineer Intern",
+        "desc": "Self-taught dev with experience in React, Ant Design, and Redux.",
+        "image":"https://photos.wellfound.com/users/16221733-medium_jpg?1680905548"
+    }
+]

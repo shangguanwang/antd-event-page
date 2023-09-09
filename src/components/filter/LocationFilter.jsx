@@ -6,11 +6,11 @@ const LocationFilter = ({locations}) => {
     <div className='location-filter-container'>
         <label>Filter by Location:</label>
         <Select>
-            <Option value="">All Locations</Option>
+            <Select.Option value="">All Locations</Select.Option>
             {locations.map((location)=>(
-                <Option key={location} value={location}>
+                <Select.Option key={location} value={location}>
                     {location}
-                </Option>
+                </Select.Option>
             ))}
         </Select>
     </div>

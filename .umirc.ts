@@ -20,6 +20,11 @@ export default defineConfig({
       component: './Home',
     },
     {
+      name: 'Team',
+      path: '/team',
+      component: './Team',
+    },
+    {
       name: 'Settings',
       path: '/access',
       component: './Access',
