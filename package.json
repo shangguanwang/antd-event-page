@@ -13,8 +13,10 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@ant-design/pro-components": "^2.4.4",
+    "@reduxjs/toolkit": "^1.9.5",
     "@umijs/max": "^4.0.80",
-    "antd": "^5.4.0"
+    "antd": "^5.4.0",
+    "react-redux": "^8.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",
