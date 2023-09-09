@@ -1,14 +1,17 @@
 import { PageContainer } from '@ant-design/pro-components';
 import { useModel } from '@umijs/max';
-import styles from './index.less';
+import EventsList from '../../components/EventsList'
+import './index.less'
+import { Col, Row } from 'antd';
 
 const HomePage: React.FC = () => {
   const { name } = useModel('global');
   return (
     <PageContainer ghost>
-      <div className={styles.container}>
-
-      </div>
+      <Row>
+      <Col span={8}>Filters Placeholder</Col>
+      <Col span={8}><EventsList /></Col>
+      </Row>
     </PageContainer>
   );
 };
