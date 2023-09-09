@@ -7,7 +7,6 @@ const pageSlice = createSlice({
   },
   reducers: {
     setCurrentPage: (state, action) => {
-      console.log('action payload', action.payload);
       state.currentPage = action.payload;
     },
   },

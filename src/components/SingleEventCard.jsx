@@ -1,26 +1,72 @@
-import React from 'react'
-import { Card, Button } from 'antd'
-import { HeartOutlined, ShareAltOutlined, UserOutlined, CompassOutlined } from '@ant-design/icons'
+import {
+  CompassOutlined,
+  HeartOutlined,
+  ShareAltOutlined,
+  UserOutlined
+} from '@ant-design/icons';
+import { Button, Card } from 'antd';
+import { useState } from 'react';
+import EventModal from './EventModal'
 
+const SingleEventCard = ({
+  title,
+  date,
+  location,
+  creator,
+  description,
+  image,
+}) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-const SingleEventCard = ({id, title, date, location, creator, description, image}) => {
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <Card style={{ marginTop: 24, width:800}} className='single-card-container'>
-      <div style={{ display: 'flex'}}>
-        <img src={image} alt={title} className='event-img'></img>
-        <div className='event-info'>
-          <h2 className='date-text'>{date}</h2>
-          <h2 className='title-text'>{title}</h2>
-          <p className='creator-text'><span className='creator-icon'><UserOutlined /></span>By {creator}</p>
-          <p className='location-text'><span className='location-icon'><CompassOutlined /></span>{location}</p>
+    <>
+      <Card
+        style={{ marginTop: 24, width: 800 }}
+        className="single-card-container"
+      >
+        <div style={{ display: 'flex' }}>
+          <img src={image} alt={title} className="event-img"></img>
+          <div className="event-info">
+            <h2 className="date-text">{date}</h2>
+            <h2 className="title-text">{title}</h2>
+            <p className="event-info-text">
+              <span className="event-info-icon">
+                <UserOutlined />
+              </span>
+              By {creator}
+            </p>
+            <p className="event-info-text">
+              <span className="event-info-icon">
+                <CompassOutlined />
+              </span>
+              {location}
+            </p>
+          </div>
+          <Button type="primary" onClick={showModal} className="showDetails-btn">
+            Show Details
+          </Button>
+          <div className="btn-container">
+            <Button className="btn" style={{ boxShadow: 'none' }}>
+              <HeartOutlined style={{ fontSize: '25px' }} />
+            </Button>
+            <Button className="btn" style={{ boxShadow: 'none' }}>
+              <ShareAltOutlined style={{ fontSize: '25px' }} />
+            </Button>
+          </div>
         </div>
-        <div className='btn-container'>
-        <Button className='btn' style={{boxShadow: 'none' }}><HeartOutlined style={{ fontSize: '25px'}}/></Button>
-        <Button className='btn' style={{boxShadow: 'none' }}><ShareAltOutlined style={{ fontSize: '25px'}}/></Button>
-        </div>
-      </div>
-    </Card>
-  )
-}
+      </Card>
 
-export default SingleEventCard
+    <EventModal isModalOpen={isModalOpen} handleCancel={handleCancel} image={image} title={title} date={date} creator={creator} location={location} description={description}/>
+    </>
+  );
+};
+
+export default SingleEventCard;
