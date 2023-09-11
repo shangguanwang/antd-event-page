@@ -1,6 +1,6 @@
 import { PageContainer } from '@ant-design/pro-components';
 import { useModel } from '@umijs/max';
-import Filter from '../../components/Filter'
+import Filter from '../../components/filter/Filter'
 import EventsList from '../../components/EventsList'
 import './index.less'
 import { Col, Row } from 'antd';

@@ -22,7 +22,7 @@
       "title": "Health and Happiness Workshop",
       "date": "2023-10-05",
       "creator":"Mobile Loaves and Fishes",
-      "location": "Downtown Theater",
+      "location": "Community Center",
       "description": "Learn more about how to live a happy and fulfilling life.",
       "image": "https://img.freepik.com/free-photo/healthy-eating-food-lifestyle-organic-wellness-graphic_53876-121392.jpg?w=740&t=st=1694207115~exp=1694207715~hmac=f3dc98a7155d34d063a54d493bda48058596a015b2263fe00a9d71be62c10555"
     },
@@ -82,10 +82,10 @@
     },
     {
       "id": 10,
-      "title": "Convention Center Gathering",
+      "title": "Community Center Gathering",
       "date": "2024-01-10",
       "creator":"Mobile Loaves and Fishes",
-      "location": "Convention Center",
+      "location": "Community Center",
       "description": "A convention for industry professionals.",
       "image": "https://img.freepik.com/free-photo/silhouettes-rush-through-modern-subway-station-entrance-hall-generated-by-ai_188544-33060.jpg?t=st=1694207637~exp=1694211237~hmac=519bfe52522af30dacf0dd41011436581b025b499798b60e4c67353a82f9eeab&w=900"
     },
@@ -94,7 +94,7 @@
       "title": "Live Music Festival",
       "date": "2024-01-20",
       "creator":"Mobile Loaves and Fishes",
-      "location": "Outdoor Concert Arena",
+      "location": "Grand Theater",
       "description": "Rock out to live music under the stars.",
       "image": "https://img.freepik.com/free-photo/stage-ritz-carlton-center-performing-arts_1340-34180.jpg?t=st=1694207681~exp=1694211281~hmac=215c559fc4b26ba413284c1a0b335b1bb964d11b4e68760a35e8d206dc35433c&w=740"
     },
@@ -112,7 +112,7 @@
       "title": "Family Picnic",
       "date": "2024-02-15",
       "creator":"Mobile Loaves and Fishes",
-      "location": "Community Park",
+      "location": "Riverfront Park",
       "description": "A family-friendly day at the park.",
       "image": "https://img.freepik.com/free-photo/young-adults-bonding-organic-lunch-feast-generated-by-ai_188544-26018.jpg?t=st=1694207783~exp=1694211383~hmac=9870ae7e3f2830b397335918522e5048cf06449bf5cbd157783c6e09debc5e65&w=900"
     },
