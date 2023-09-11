@@ -10,13 +10,26 @@ const EventsList = ({data}) => {
   const pageSize = 3;
   const dispatch = useDispatch();
   
-  // Import selectedLocation state from LocationFilterSlice
+  // Import two filter state from redux slice
   const selectLocation = useSelector((store)=>store.locationFilter);
+  const selectCause = useSelector((store)=>store.causeFilter);
 
-  // Filter the data based on the selectLocation
-  const filteredData = selectLocation
-  ?data.filter((event)=> event.location === selectLocation)
-  :data;
+  // Filter the data based on the selectLocation and selectCause
+  const filteredData = data.filter((event)=>{
+    // if both filters are selected
+    if (selectLocation && selectCause){
+      return event.location === selectLocation && event.causeCategory === selectCause;
+    }
+    // if only one filter is selected
+    else if (selectLocation){
+      return event.location === selectLocation
+    }
+    else if (selectCause){
+      return event.causeCategory === selectCause;
+    }
+    // if neither filter is applied, return all events
+    return true;
+  })
 
   // Slice the data array to display only the items for the current page
   const currentData = useMemo(()=>{
@@ -32,18 +45,18 @@ const EventsList = ({data}) => {
 
   return (
     <div className="events-list-container">
-      {currentData.map((item)=><SingleEventCard key={item.id} {...item}/>)}
-      <div>
-      <Pagination defaultCurrent={1} current={selectCurrentPage} total={filteredData.length} pageSize={pageSize} onChange={handlePageChange} 
+      {currentData.length>0
+      ?currentData.map((item)=><SingleEventCard key={item.id} {...item}/>)
+      :<h1>No Matching Records</h1>}
+      {currentData.length>0 && <Pagination defaultCurrent={1} current={selectCurrentPage} total={filteredData.length} pageSize={pageSize} onChange={handlePageChange} 
         itemRender={(page, type, originalElement)=>{
           // hide the next and prev button
           if(type ==="next" || type === "prev"){
             return;
           } else if(type === "page"){
-            return originalElement;
+            return <a>{page}</a>;
           }
-        }}/>
-      </div>
+        }}/>}
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import { PageContainer } from '@ant-design/pro-components';
-import { useModel } from '@umijs/max';
 import Filter from '../../components/filter/Filter'
 import EventsList from '../../components/EventsList'
 import './index.less'
@@ -10,7 +9,6 @@ import { Provider } from 'react-redux';
 import {store} from '../../redux/store';
 
 const HomePage: React.FC = () => {
-  const { name } = useModel('global');
   const [data, setData] = useState(eventsdata);
 
   return (

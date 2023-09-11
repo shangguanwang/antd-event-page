@@ -4,7 +4,7 @@ import {
   ShareAltOutlined,
   UserOutlined
 } from '@ant-design/icons';
-import { Button, Card } from 'antd';
+import { Button, Card} from 'antd';
 import { useState } from 'react';
 import EventModal from './EventModal'
 
@@ -15,6 +15,7 @@ const SingleEventCard = ({
   creator,
   description,
   image,
+  causeCategory,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -64,7 +65,7 @@ const SingleEventCard = ({
         </div>
       </Card>
 
-    <EventModal isModalOpen={isModalOpen} handleCancel={handleCancel} image={image} title={title} date={date} creator={creator} location={location} description={description}/>
+    <EventModal isModalOpen={isModalOpen} handleCancel={handleCancel} image={image} title={title} date={date} creator={creator} location={location} description={description} causeCategory={causeCategory}/>
     </>
   );
 };
