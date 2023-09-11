@@ -8,7 +8,7 @@ const AccessPage = () => {
         title: 'Settings',
       }}
     >
-        <Card title="Change User Settings" style={{ width: 600 }}>
+        <Card title="Change User Settings" style={{ maxWidth:400}}>
           <Form name="user_settings" layout="vertical"
           onFinish={(values)=>{
             console.log('User Input Received', values);

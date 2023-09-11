@@ -16,7 +16,7 @@ const LocationFilter = ({ locations }) => {
       <label aria-label="filter by locations">
         <h3>by Location:</h3>
         <Select
-          defaultValue={'All Locations'}
+          defaultValue={"All Locations"}
           value={selectLocation}
           onChange={handleLocationChange}
           style={{ width: 200 }}

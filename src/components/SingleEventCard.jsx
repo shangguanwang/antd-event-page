@@ -29,11 +29,8 @@ const SingleEventCard = ({
 
   return (
     <>
-      <Card
-        style={{ marginTop: 24, width: 800 }}
-        className="single-card-container"
-      >
-        <div style={{ display: 'flex' }}>
+      <Card className="single-card-container">
+        <div className="event-data-container">
           <img src={image} alt={title} className="event-img"></img>
           <div className="event-info">
             <h2 className="date-text">{date}</h2>

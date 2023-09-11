@@ -3,6 +3,30 @@
   padding-top: 80px;
 }
 
+.collapse-container{
+  max-width: 35%;
+  height: 25%;
+  margin-top: 24px;
+  margin-right: 2rem;
+}
+
+.single-card-container{
+  width: 800px;
+  margin: 24px auto;
+}
+
+.filter-card-container {
+  margin: 24px;
+}
+
+.filter-container{
+  overflow: hidden;
+}
+
+.event-data-container {
+  display: flex;
+}
+
 .event-info{
   margin-left: 2rem;
 }
@@ -79,4 +103,72 @@
 .cause-btn.selected {
   background-color: #143c64; 
   color: white; 
+}
+
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .mainrow-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-card-container {
+    margin: 0;
+  }
+  .single-card-container{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .event-data-container{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px; //make some space for the two buttons
+  }
+
+  .event-info{
+    margin: 0;
+  }
+
+  .event-info-text{
+    margin-bottom: 0;
+  }
+
+  .event-info-icon{
+    margin-right: 2px;
+  }
+
+  .event-img{
+    width: 180px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .title-text{
+    font-size: large;
+  }
+  .btn-container{
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  /* Responsive Design for ipad-size screen */
+  .mainrow-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-card-container {
+    margin: 0;
+  }
+  .collapse-container{
+    max-width: 100%;
+    margin-right: 0px;
+  }
+  .single-card-container{
+    width: 100%;
+    margin-top: 10px;
+  }
 }

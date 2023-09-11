@@ -17,15 +17,16 @@ const Filter = ({ data }) => {
     dispatch(setCause(''));
   }
 
+
   return (
-    <Card style={{ margin: 24 }}>
-      <Row className="filter-top">
-      <h2>FILTERS</h2>
-      <button type="reset" className="clearFilter-btn" onClick={handleClearFilter}>Clear All</button>
-      </Row>
-      <LocationFilter locations={locations} />
-      <CauseFilter causes={causes} />
-    </Card>
+      <Card className="filter-card-container">
+        <Row className="filter-top">
+        <h2>FILTERS</h2>
+        <button type="reset" className="clearFilter-btn" onClick={handleClearFilter}>Clear All</button>
+        </Row>
+        <LocationFilter locations={locations} />
+        <CauseFilter causes={causes} />
+      </Card>
   );
 };
 

@@ -11,13 +11,13 @@ const TeamPage = () => {
         title: 'Team Page',
       }}
     >
-      <Row gutter={[16, 16]}>
+      <Row>
         {teamData.map((member,index)=>(
-          <Col span={8} key={index}>
-            <Card style={{ height: 350 }}>
-              <Avatar size={120} src={member.image}></Avatar>
-              <h1>{member.name}</h1>
-              <h2>{member.title}</h2>
+          <Col xs={24} md={8} key={index}>
+            <Card style={{ height: 350, margin:10 }}>
+              <Avatar size={{xs: 80, xl: 120, xxl: 120}} src={member.image}></Avatar>
+              <h2 style={{marginBottom:0}}>{member.name}</h2>
+              <h3>{member.title}</h3>
               <p style={{color:"grey"}}>{member.desc}</p>
             </Card>
           </Col>
