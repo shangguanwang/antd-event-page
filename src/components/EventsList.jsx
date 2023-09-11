@@ -1,7 +1,7 @@
 import SingleEventCard from './SingleEventCard';
 import { useDispatch, useSelector} from 'react-redux';
 import { selectCurrentPage, setCurrentPage } from '@/redux/pageSlice';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Pagination } from 'antd';
 
 const EventsList = ({data}) => {
@@ -43,12 +43,17 @@ const EventsList = ({data}) => {
     dispatch(setCurrentPage(newPage));
   }
 
+  // reset the currentPage to page 1 when a filter is applied
+  useEffect(()=>{
+    dispatch(setCurrentPage(1));
+  },[selectLocation, selectCause])
+
   return (
     <div className="events-list-container">
       {currentData.length>0
       ?currentData.map((item)=><SingleEventCard key={item.id} {...item}/>)
       :<h1>No Matching Records</h1>}
-      {currentData.length>0 && <Pagination defaultCurrent={1} current={selectCurrentPage} total={filteredData.length} pageSize={pageSize} onChange={handlePageChange} 
+      {currentData.length>=pageSize && <Pagination defaultCurrent={1} current={selectCurrentPage} total={filteredData.length} pageSize={pageSize} onChange={handlePageChange} 
         itemRender={(page, type, originalElement)=>{
           // hide the next and prev button
           if(type ==="next" || type === "prev"){
